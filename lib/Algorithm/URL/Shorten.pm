@@ -10,14 +10,6 @@ use warnings;
 
 Algorithm::URL::Shorten - URL shortening algorithm.
 
-=head1 VERSION
-
-Version 0.02
-
-=cut
-
-our $VERSION = '0.02';
-
 =head1 SYNOPSIS
 
 Algorithm::URL::Shorten generates short codes used to map and represent
