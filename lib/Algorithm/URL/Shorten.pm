@@ -17,7 +17,7 @@ longer URLs.
 
     use Algorithm::URL::Shorten qw(shorten_url);
 
-    my $shorts = shorten_url("http://perl.org", 6);
+    my $shorts = shorten_url("http://perl.org");
 
     foreach $code (@{$shorts}) {
         print $code, "\n";
@@ -61,9 +61,7 @@ an md5 hash, which is used by the algorithm.
 =cut
 
 sub shorten_url {
-	my ($url, $short_lenght) = @_;
-	$short_lenght = $short_lenght <= 5 ? $short_lenght : 5;
-	
+	my $url= shift;
 
 	my @chars = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
 		     'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
@@ -82,10 +80,10 @@ sub shorten_url {
 		my $int     = hex $sub_hex;
 		my $out;
 
-		for (my $j = 0; $j < $short_lenght; $j++) {
+		for (my $j = 0; $j < 6; $j++) {
 			my $val = 0x0000003D & $int;
 			$out   .= $chars[$val];
-			$int    = $int >> $short_lenght+1;
+			$int    = $int >> 5;
 		}
 
 		push @output, $out;
