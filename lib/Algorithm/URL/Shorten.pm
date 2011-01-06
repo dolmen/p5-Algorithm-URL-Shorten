@@ -25,10 +25,10 @@ longer URLs.
 
 This code prints
 
-    zKH5bO
-    eqSbWf
-    ymaay0
-    8rqWn0
+    iqGzim
+    S515va
+    qmKrq8
+    HXv4HD
 
 =head1 DESCRIPTION
 
@@ -71,7 +71,7 @@ sub shorten_url {
 		     '4', '5', '6', '7', '8', '9');
 
 	my @output;
-	my $hex = md5_hex(shift);
+	my $hex = md5_hex($url);
 
 	for (my $i = 0; $i < length($hex) / 8; $i++) {
 		my $sub_hex = "0x".substr $hex, $i * 8, 8;
