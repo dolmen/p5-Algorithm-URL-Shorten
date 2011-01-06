@@ -47,7 +47,7 @@ The module exports the subroutine 'shorten_url' on request.
 
 our @EXPORT_OK = qw(shorten_url);
 
-=head1 SUBROUTINES/METHODS
+=head1 SUBROUTINES
 
 =head2 shorten_url( $url )
 
