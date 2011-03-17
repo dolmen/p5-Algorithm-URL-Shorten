@@ -101,44 +101,6 @@ v0.02 and v0.01 are not compatible with the new version.
 
 Alessandro Ghedini <alexbio@cpan.org>
 
-=head1 BUGS
-
-Please report any bugs or feature requests to C<bug-algorithm-url-shorten at rt.cpan.org>, or through
-the web interface at L<http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Algorithm-URL-Shorten>.  I will be notified, and then you'll
-automatically be notified of progress on your bug as I make changes.
-
-=head1 SUPPORT
-
-You can find documentation for this module with the perldoc command.
-
-    perldoc Algorithm::URL::Shorten
-
-You can also look for information at:
-
-=over 4
-
-=item * GitHub
-
-L<http://github.com/AlexBio/Algorithm-URL-Shorten>
-
-=item * RT: CPAN's request tracker
-
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Algorithm-URL-Shorten>
-
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Algorithm-URL-Shorten>
-
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Algorithm-URL-Shorten>
-
-=item * Search CPAN
-
-L<http://search.cpan.org/dist/Algorithm-URL-Shorten/>
-
-=back
-
 =head1 LICENSE AND COPYRIGHT
 
 Copyright 2010 Alessandro Ghedini.
