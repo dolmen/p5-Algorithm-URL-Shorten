@@ -99,7 +99,7 @@ v0.02 and v0.01 are not compatible with the new version.
 
 =head1 AUTHOR
 
-Alessandro Ghedini, C<< <alexbio at cpan.org> >>
+Alessandro Ghedini <alexbio@cpan.org>
 
 =head1 BUGS
 
