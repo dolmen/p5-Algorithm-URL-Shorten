@@ -37,7 +37,7 @@ so that every time it is used on the same URL, it will generate the same
 codes.
 
 The short strings are alphanumeric ASCII ([a-z], [A-Z], and [0-9]) for a
-total of 62 characters, which may be mapped in 62 ^ 6.
+total of 62 characters, which may be mapped in 62 ^ 6 different codes.
 
 =head1 EXPORT
 
@@ -51,8 +51,8 @@ our @EXPORT_OK = qw(shorten_url);
 
 =head2 shorten_url( $url )
 
-This function takes as arguments an URL to shorten, and the desired lenght
-of the shortened values, and returns an array reference containing 4 values.
+This function takes as arguments an URL to shorten, and returns an array 
+reference containing 4 strings.
 
 The generated codes will be of six characters long.
 
