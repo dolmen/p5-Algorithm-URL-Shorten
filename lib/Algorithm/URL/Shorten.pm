@@ -8,7 +8,7 @@ use warnings;
 
 =head1 NAME
 
-Algorithm::URL::Shorten - URL shortening algorithm.
+Algorithm::URL::Shorten - URL shortening algorithm
 
 =head1 SYNOPSIS
 
