@@ -1,10 +1,13 @@
 package Algorithm::URL::Shorten;
 
-use base Exporter;
-use Digest::MD5 qw(md5_hex);
-
 use strict;
 use warnings;
+
+use Digest::MD5 qw(md5_hex);
+
+require Exporter;
+
+our @ISA = qw(Exporter);
 
 =head1 NAME
 
