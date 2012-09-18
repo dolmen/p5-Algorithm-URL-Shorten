@@ -5,10 +5,6 @@ use warnings;
 
 use Digest::MD5 qw(md5);
 
-require Exporter;
-
-our @ISA = qw(Exporter);
-
 =head1 NAME
 
 Algorithm::URL::Shorten - URL shortening algorithm
@@ -47,6 +43,7 @@ The module exports the subroutine C<shorten_url> on request.
 
 =cut
 
+use Exporter 5.57 'import';
 our @EXPORT_OK = qw(shorten_url);
 
 my @CHARS = ('a'..'z', 'A'..'Z', '0'..'9');
