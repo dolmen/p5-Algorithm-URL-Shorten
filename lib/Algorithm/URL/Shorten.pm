@@ -3,7 +3,7 @@ package Algorithm::URL::Shorten;
 use strict;
 use warnings;
 
-use Digest::MD5 qw(md5_hex);
+use Digest::MD5 qw(md5);
 
 require Exporter;
 
@@ -66,13 +66,10 @@ sub shorten_url {
 	my $url= shift;
 
 	my @output;
-	my $hex = md5_hex($url);
 
-	for (my $i = 0; $i < length($hex) / 8; $i++) {
-		my $sub_hex = "0x".substr $hex, $i * 8, 8;
-		my $int     = hex $sub_hex;
+	foreach my $int (unpack('N4', md5($url))) {
+
 		my $out;
-
 		for (my $j = 0; $j < 6; $j++) {
 			my $val = 0x0000003D & $int;
 			$out   .= $CHARS[$val];
