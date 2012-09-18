@@ -49,6 +49,8 @@ The module exports the subroutine C<shorten_url> on request.
 
 our @EXPORT_OK = qw(shorten_url);
 
+my @CHARS = ('a'..'z', 'A'..'Z', '0'..'9');
+
 =head1 SUBROUTINES
 
 =head2 shorten_url( $url )
@@ -63,15 +65,6 @@ The generated codes will be of six characters long.
 sub shorten_url {
 	my $url= shift;
 
-	my @chars = ('a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
-		     'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p',
-		     'q', 'r', 's', 't', 'u', 'v', 'w', 'x',
-		     'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F',
-		     'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N',
-		     'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V',
-		     'W', 'X', 'Y', 'Z', '0', '1', '2', '3',
-		     '4', '5', '6', '7', '8', '9');
-
 	my @output;
 	my $hex = md5_hex($url);
 
@@ -82,7 +75,7 @@ sub shorten_url {
 
 		for (my $j = 0; $j < 6; $j++) {
 			my $val = 0x0000003D & $int;
-			$out   .= $chars[$val];
+			$out   .= $CHARS[$val];
 			$int    = $int >> 5;
 		}
 
